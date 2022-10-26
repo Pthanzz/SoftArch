@@ -27,11 +27,11 @@ public class JSONBookMetadataFormatter implements BookMetadataFormatter {
 
         JSONArray authors = new JSONArray();
         for (String author : b.getAuthors()) {
-            authors.put(author);
+            authors.add(author);
         }
         bookObject.put(Book.Metadata.AUTHORS.value, authors);
 
-        jsonArray.put(bookObject);
+        jsonArray.add(bookObject);
 
         return this; 
     }
